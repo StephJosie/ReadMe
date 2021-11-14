@@ -58,13 +58,13 @@ const userInfo = () => {
 };
 
 const badges = {
-    'The Do What the Fuck You Want to Public License': '(https://img.shields.io/badge/License-WTFPL-brightgreen.svg)](http://www.wtfpl.net/about/)',
-    'The Unlicense': '(https://img.shields.io/badge/license-Unlicense-blue.svg)](http://unlicense.org/)',
-    'Eclipse Public License 1.0': '(https://img.shields.io/badge/License-EPL_1.0-red.svg)](https://opensource.org/licenses/EPL-1.0)',
-    'Boost Software License 1.0': '(https://img.shields.io/badge/License-Boost_1.0-lightblue.svg)](https://www.boost.org/LICENSE_1_0.txt)',
-    'Apache 2.0 License': '(https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)',
-    'The Hippocratic License 3.0': '(https://img.shields.io/badge/License-Hippocratic_3.0-lightgrey.svg)](https://firstdonoharm.dev)',
-    'The MIT License': '(https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)',
+    'The Do What the Fuck You Want to Public License': 'https://img.shields.io/badge/License-WTFPL-brightgreen.svg',
+    'The Unlicense': 'https://img.shields.io/badge/license-Unlicense-blue.svg',
+    'Eclipse Public License 1.0': 'https://img.shields.io/badge/License-EPL_1.0-red.svg',
+    'Boost Software License 1.0': 'https://img.shields.io/badge/License-Boost_1.0-lightblue.svg',
+    'Apache 2.0 License': 'https://img.shields.io/badge/License-Apache_2.0-blue.svg',
+    'The Hippocratic License 3.0': 'https://img.shields.io/badge/License-Hippocratic_3.0-lightgrey.svg',
+    'The MIT License': 'https://img.shields.io/badge/License-MIT-yellow.svg',
 };
 
 const generateReadme = ({
