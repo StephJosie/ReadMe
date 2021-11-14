@@ -1,6 +1,6 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
-const Choices = require('inquirer/lib/objects/choices');
+// const Choices = require('inquirer/lib/objects/choices');
 const userInfo = () => {
     return inquirer.prompt([
         {
@@ -41,11 +41,8 @@ const userInfo = () => {
                 'Apache 2.0 License',
                 'The Hippocratic License 3.0',
                 'The MIT License',
-
-
-
             ],
-            name: 'license',
+            name: 'License',
         },
         {
             type: 'input',
@@ -68,15 +65,53 @@ const badges = {
     'Apache 2.0 License': '(https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)',
     'The Hippocratic License 3.0': '(https://img.shields.io/badge/License-Hippocratic_3.0-lightgrey.svg)](https://firstdonoharm.dev)',
     'The MIT License': '(https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)',
+};
+
+const generateReadme = ({
+    Title,
+    Description,
+    Installation,
+    Usage,
+    Credits,
+    License,
+    Contribute,
+    Tests,
+}) => `# ${Title}
+![Badge for GitHub repo top language](${badges[License]})
+Check out the badges hosted by [shields.io](https://shields.io/)
+## Description 
+${Description}
+## Table of Contents
+ * [Installation](#installation)
+ * [Usage](#usage)
+ * [License](#license)
+ * [Contributing](#contributing)
+ * [Tests](#tests)  
+ * [Questions](#questions)
+## Installation
+*Steps required to install project and how to get the development environment running:*
+${Installation}
+## Usage 
+*Instructions and examples for use:*
+${Usage}
+## Credits
+*List anyone who helped on your project*
+${Credits}
+## License
+${License}
+## Contribute
+*If you would like to contribute it, you can follow these guidelines for how to do so.*
+${Contribute}
+## Tests
+*Tests for application and how to run them:*
+${Tests}
+![README File](assets/screenshot.png)
+[Demo Video!](assets/Demo.mp4)
+`;
 
 
-
-
-
-}
 
 const init = () => {
-
     userInfo()
         .then((answers) => fs.writeFileSync("./README.md", generateReadme(answers)))
         .then(() => console.log("Congratulations you wrote to ReadMe.md!"))
