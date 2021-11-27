@@ -1,6 +1,6 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
-// const Choices = require('inquirer/lib/objects/choices');
+
 const userInfo = () => {
     return inquirer.prompt([
         {
@@ -76,8 +76,9 @@ const generateReadme = ({
     License,
     Contribute,
     Tests,
+
 }) => `# ${Title}
-![Badge for GitHub repo top language](${badges[License]})
+[Badge for GitHub repo top language](${badges[License]})
 Check out the badges hosted by [shields.io](https://shields.io/)
 ## Description 
 ${Description}
@@ -87,7 +88,6 @@ ${Description}
  * [License](#license)
  * [Contributing](#contributing)
  * [Tests](#tests)  
- * [Questions](#questions)
 ## Installation
 *Steps required to install project and how to get the development environment running:*
 ${Installation}
@@ -105,8 +105,9 @@ ${Contribute}
 ## Tests
 *Tests for application and how to run them:*
 ${Tests}
-![README File](assets/screenshot.png)
-[Demo Video!](assets/Demo.mp4)
+## Images
+* [README File](assets/screenshot.png)
+* [Demo Video!](assets/Demo.mp4)
 `;
 
 
